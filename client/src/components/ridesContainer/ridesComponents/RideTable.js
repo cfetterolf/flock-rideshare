@@ -39,7 +39,7 @@ function RideTable(props) {
   ));
 
   return (
-    <div style={{ overflowY: 'scroll', height: '100vh', padding: '0px 10px 0 10px' }}>
+    <div style={{ overflowY: 'scroll', height: 'calc(100vh - 200px)', padding: '0px 10px 0 10px' }}>
       {listRides}
     </div>
   );
