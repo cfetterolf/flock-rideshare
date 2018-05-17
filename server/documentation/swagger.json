@@ -1,0 +1,472 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Midd Rideshare",
+    "version" : "1.0.0",
+    "title" : "Midd Rideshare API routes documentation",
+    "contact" : {
+      "email" : "middrideshare@gmail.com"
+    }
+  },
+  "host" : "secret-plains-24328.herokuapp.com",
+  "tags" : [ {
+    "name" : "Rides",
+    "description" : "Everything about Rides"
+  }, {
+    "name" : "Users",
+    "description" : "Everything about Users"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/api/users" : {
+      "get" : {
+        "tags" : [ "Users" ],
+        "summary" : "gets all users",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "response OK"
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "Users" ],
+        "summary" : "adds a user",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "User",
+          "description" : "User to add",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/User_Post_Example"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "user created"
+          },
+          "400" : {
+            "description" : "invalid input, object invalid"
+          }
+        }
+      }
+    },
+    "/api/users/{_id}" : {
+      "get" : {
+        "tags" : [ "Users" ],
+        "summary" : "gets a user by its _id",
+        "description" : "By passing in the appropriate options, you can search for\navailable inventory in the system\n",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "_id",
+          "in" : "path",
+          "description" : "the _id of a user",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "response OK"
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "Users" ],
+        "summary" : "updates a user by its _id",
+        "description" : "By passing in the appropriate options, you can search for\navailable inventory in the system\n",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "_id",
+          "in" : "path",
+          "description" : "user that needs to be updated",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "description" : "Updated email on user object",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/User_Put_Example"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "user updated"
+          }
+        }
+      }
+    },
+    "/api/rides" : {
+      "get" : {
+        "tags" : [ "Rides" ],
+        "summary" : "gets all rides",
+        "description" : "By passing in the appropriate options, you can search for\navailable rides in the database\n",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "response OK"
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "Rides" ],
+        "summary" : "adds a ride",
+        "description" : "Adds a ride",
+        "operationId" : "addRide",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "ride",
+          "description" : "The ride to create.",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Ride_Post_example"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "ride created"
+          }
+        }
+      }
+    },
+    "/api/rides/{_id}" : {
+      "get" : {
+        "tags" : [ "Rides" ],
+        "summary" : "gets a ride by its _id",
+        "description" : "By passing in the appropriate options, you can search for\navailable inventory in the system\n",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "_id",
+          "in" : "path",
+          "description" : "the _id of a ride",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "response OK"
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "Rides" ],
+        "summary" : "updates a ride by its _id",
+        "description" : "By passing in the appropriate options, you can search for\navailable inventory in the system\n",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "_id",
+          "in" : "path",
+          "description" : "ride that needs to be updated",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "description" : "Updated ride object",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/Ride_Put_Example"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "ride updated"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "Rides" ],
+        "summary" : "deletes a ride by its _id",
+        "description" : "By passing in the appropriate options, you can search for\navailable inventory in the system\n",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "_id",
+          "in" : "path",
+          "description" : "the _id of a ride",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "ride deleted"
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "User" : {
+      "type" : "object",
+      "required" : [ "_id", "email", "name", "password" ],
+      "properties" : {
+        "_id" : {
+          "type" : "string",
+          "format" : "uuid",
+          "example" : "5ad7069822aed40014b03eef"
+        },
+        "email" : {
+          "type" : "string",
+          "format" : "email",
+          "example" : "bgarcin@middlebury.edu",
+          "pattern" : "/\\b[A-Z0-9a-z._%+-]+@middlebury.edu\\b"
+        },
+        "name" : {
+          "type" : "string",
+          "example" : "Baptiste",
+          "minLength" : 2
+        },
+        "password" : {
+          "type" : "string",
+          "example" : "0123",
+          "description" : "Hashed once stored",
+          "minLength" : 4
+        },
+        "rides" : {
+          "type" : "array",
+          "example" : [ "rideId1", "rideId2", "..." ],
+          "items" : {
+            "type" : "string",
+            "format" : "uuid"
+          }
+        }
+      }
+    },
+    "Ride" : {
+      "required" : [ "_id", "date", "from", "fullfilled", "price", "to", "type", "userId" ],
+      "properties" : {
+        "_id" : {
+          "type" : "string",
+          "format" : "uuid",
+          "example" : "5ad53568f982cc00149bbc1f"
+        },
+        "type" : {
+          "type" : "string",
+          "example" : "offer",
+          "pattern" : "offer OR request"
+        },
+        "fullfilled" : {
+          "type" : "boolean",
+          "example" : true
+        },
+        "from" : {
+          "type" : "string",
+          "example" : "Middlebury"
+        },
+        "to" : {
+          "type" : "string",
+          "example" : "Burlington"
+        },
+        "time" : {
+          "type" : "string",
+          "example" : "12:03"
+        },
+        "date" : {
+          "type" : "string",
+          "example" : "2019-12-02"
+        },
+        "passangers" : {
+          "type" : "array",
+          "example" : [ "userId1", "userId2", "userId3", "userId4" ],
+          "items" : {
+            "type" : "string",
+            "format" : "uuid"
+          }
+        },
+        "seats_avail" : {
+          "type" : "integer",
+          "example" : 2,
+          "minimum" : 0,
+          "maximum" : 4
+        },
+        "notes" : {
+          "type" : "string",
+          "example" : "Going to Burlington for thanksgiving"
+        },
+        "price" : {
+          "type" : "number",
+          "example" : 10.0
+        },
+        "userId" : {
+          "type" : "string",
+          "format" : "uuid",
+          "example" : "5ad7069822aed40014b03eef",
+          "description" : "id of the user that submitted the ride"
+        }
+      },
+      "example" : {
+        "date" : "2019-12-02",
+        "fullfilled" : true,
+        "notes" : "Going to Burlington for thanksgiving",
+        "price" : 10.0,
+        "from" : "Middlebury",
+        "passangers" : [ "userId1", "userId2", "userId3", "userId4" ],
+        "_id" : "5ad53568f982cc00149bbc1f",
+        "to" : "Burlington",
+        "time" : "12:03",
+        "type" : "offer",
+        "seats_avail" : 2,
+        "userId" : "5ad7069822aed40014b03eef"
+      }
+    },
+    "User_Post_Example" : {
+      "type" : "object",
+      "required" : [ "email", "name", "password" ],
+      "properties" : {
+        "email" : {
+          "type" : "string",
+          "format" : "email",
+          "example" : "email@middlebury.edu",
+          "pattern" : "/\\b[A-Z0-9a-z._%+-]+@middlebury.edu\\b"
+        },
+        "name" : {
+          "type" : "string",
+          "example" : "Baptiste",
+          "minLength" : 2
+        },
+        "password" : {
+          "type" : "string",
+          "example" : "0123",
+          "description" : "Hashed once stored",
+          "minLength" : 4
+        }
+      },
+      "example" : {
+        "password" : "0123",
+        "name" : "Baptiste",
+        "email" : "email@middlebury.edu"
+      }
+    },
+    "User_Put_Example" : {
+      "type" : "object",
+      "properties" : {
+        "email" : {
+          "type" : "string",
+          "example" : "updatedEmail@middlebury.edu"
+        }
+      }
+    },
+    "Ride_Post_example" : {
+      "type" : "object",
+      "required" : [ "date", "from", "fullfilled", "price", "to", "type", "userId" ],
+      "properties" : {
+        "type" : {
+          "type" : "string",
+          "example" : "offer"
+        },
+        "fullfilled" : {
+          "type" : "boolean",
+          "example" : true
+        },
+        "from" : {
+          "type" : "string",
+          "example" : "Middlebury"
+        },
+        "to" : {
+          "type" : "string",
+          "example" : "Burlington"
+        },
+        "time" : {
+          "type" : "string",
+          "example" : "12:03"
+        },
+        "date" : {
+          "type" : "string",
+          "example" : "2019-12-02"
+        },
+        "passangers" : {
+          "type" : "array",
+          "example" : [ "userId1", "userId2", "userId3", "userId4" ],
+          "items" : {
+            "type" : "string",
+            "format" : "uuid"
+          }
+        },
+        "seats_avail" : {
+          "type" : "integer",
+          "example" : 2,
+          "minimum" : 0,
+          "maximum" : 4
+        },
+        "notes" : {
+          "type" : "string",
+          "example" : "Going to Burlington for thanksgiving"
+        },
+        "price" : {
+          "type" : "number",
+          "example" : 10.0
+        },
+        "userId" : {
+          "type" : "string",
+          "format" : "uuid",
+          "example" : "5ad7069822aed40014b03eef",
+          "description" : "id of the user that submitted the ride"
+        }
+      }
+    },
+    "Ride_Put_Example" : {
+      "type" : "object",
+      "required" : [ "date", "from", "fullfilled", "price", "to", "type", "userId" ],
+      "properties" : {
+        "type" : {
+          "type" : "string",
+          "example" : "offer"
+        },
+        "fullfilled" : {
+          "type" : "boolean",
+          "example" : true
+        },
+        "from" : {
+          "type" : "string",
+          "example" : "Middlebury"
+        },
+        "to" : {
+          "type" : "string",
+          "example" : "Burlington"
+        },
+        "time" : {
+          "type" : "string",
+          "example" : "12:03"
+        },
+        "date" : {
+          "type" : "string",
+          "example" : "2019-12-02"
+        },
+        "passangers" : {
+          "type" : "array",
+          "example" : [ "userId1", "userId2", "userId3", "userId4" ],
+          "items" : {
+            "type" : "string",
+            "format" : "uuid"
+          }
+        },
+        "seats_avail" : {
+          "type" : "integer",
+          "example" : 2,
+          "minimum" : 0,
+          "maximum" : 4
+        },
+        "notes" : {
+          "type" : "string",
+          "example" : "Going to Burlington for thanksgiving"
+        },
+        "price" : {
+          "type" : "number",
+          "example" : 10.0
+        },
+        "userId" : {
+          "type" : "string",
+          "format" : "uuid",
+          "example" : "5ad7069822aed40014b03eef",
+          "description" : "id of the user that submitted the ride"
+        }
+      }
+    }
+  }
+}

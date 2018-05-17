@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - "lts/carbon"
+before_script:
+  - export TZ=America/New_York
+install:
+    - npm install --prefix client
+    - npm install --prefix server
+cache:
+  directories:
+    - client/node_modules
+    - server/node_modules
+script:
+  - npm run build --prefix client
+  - npm test --prefix client
+  - npm run lint --prefix client
+  - npm test --prefix server
+  - npm run lint --prefix server

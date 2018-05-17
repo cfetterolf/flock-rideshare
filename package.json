@@ -1,0 +1,51 @@
+{
+  "name": "rideshare",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Web application for ride sharing",
+  "engines": {
+    "node": "8.9.x"
+  },
+  "scripts": {
+    "test": "npm test --prefix client && npm test --prefix server",
+    "lint": "npm lint --prefix client && npm lint --prefix server",
+    "start": "concurrently \"npm start --prefix server\" \"npm start --prefix client\"",
+    "heroku-postbuild": "npm install --prefix client && npm install --only=dev --no-shrinkwrap --prefix client && npm run build --prefix client && npm install --prefix server"
+  },
+  "cacheDirectories": [
+    "client/node_modules",
+    "server/node_modules"
+  ],
+  "keywords": [],
+  "contributors": [
+    "Mariana Echeverria <mecheverria@middlebury.edu>",
+    "Holley McShan <hmcshan@middlebury.edu>",
+    "Emilio Ovalles-Misterman <eomisterman@middlebury.edu>",
+    "Chris Fetterolf <cfetterolf@middlebury.edu>",
+    "Jocelyn Zemach <jzemach@middlebury.edu>",
+    "Kyle Schlanger <kschlanger@middlebury.edu>",
+    "Stephanie Castaneda <scastaneda@middlebury.edu>",
+    "Baptiste Garcin <bgarcin@middlebury.edu>",
+    "Anna Vasilchenko <avasilchenko@middlebury.edu>"
+  ],
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "react-test-renderer": "^16.3.2"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "prefix": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csci312a-s18/fp-rideshare.git"
+  },
+  "author": "[Mariana Echeverria] <[marianaecheverria96@gmail.com]>",
+  "bugs": {
+    "url": "https://github.com/csci312a-s18/fp-rideshare/issues"
+  },
+  "homepage": "https://github.com/csci312a-s18/fp-rideshare#readme"
+}

@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Leckerli+One|Open+Sans|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:500|Josefin+Sans|Sarala|Signika:300');
+
+.title {
+  font-family: 'Sarala', sans-serif;
+  font-style: normal;
+  font-size: 60px;
+  color: #3679B8 !important;
+  text-align: center;
+}
+
+.navbar .dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+
+.navbar .avatar {
+  margin-top: -2.4rem;
+}
+
+.subtitle {
+  font-size: 25px;
+  font-weight: 300;
+  color: #585858;
+  margin-top: -20px;
+  text-align: center;
+}
+
+.login-register {
+  display: inline-flex;
+}
+
+.login-register p {
+  margin: auto;
+  margin-right: 5px;
+  color: #666666;
+}
+
+.login-register button {
+  margin-left: 5px;
+  padding: 0;
+}
+
+.login-box {
+  padding: 60px;
+  background-color: white;
+  border-radius: 10px;
+  height: fit-content;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.35);
+}
+
+.login-box form {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.btn-register {
+  width: 214px !important;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.0);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.bd-form {
+  text-align: center;
+}
+
+.signInBtn {
+  width: 200px;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  display: relative;
+  float:left;
+  margin: 20px 110px 10px;
+}
+
+.signInBtn:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.22);
+  cursor: pointer;
+}
+
+.Ride{
+  background: #eee url(https://subtlepatterns.com/patterns/extra_clean_paper.png);
+}
+.footer{
+  background: #eee url(https://subtlepatterns.com/patterns/extra_clean_paper.png);
+}
+.footerbutton{
+  background: white;
+}
+
+input{
+  float: 'center';
+  margin: 5px;
+}
+
+.dropdown-item:hover {
+  cursor: pointer;
+}
+
+/* background video: https://www.w3schools.com/howto/howto_css_fullscreen_video.asp */
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#vidContainer {
+  overflow: hidden;
+  /* -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px); */
+}
+
+.email-text {
+  color: #666666;
+}

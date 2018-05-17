@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Leckerli+One|Open+Sans|Roboto');
+
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 35px;
+  padding-right: 35px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: lightgrey;
+  height: 70px;
+}
+
+.navbar-brand {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.react-tabs li {
+  width: 50%;
+  padding: 0;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.avatar:hover {
+  cursor: pointer;
+}
+
+.col-md-6 {
+  padding: 0px !important;
+}

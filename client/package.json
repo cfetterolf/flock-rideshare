@@ -1,0 +1,57 @@
+{
+  "name": "rideshare-client",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "https://secret-plains-24328.herokuapp.com",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "contributors": [
+    "Mariana Echeverria <mecheverria@middlebury.edu>",
+    "Holley McShan <hmcshan@middlebury.edu>",
+    "Emilio Ovalles-Misterman <eomisterman@middlebury.edu>>",
+    "Chris Fetterolf <cfetterolf@middlebury.edu>>",
+    "Jocelyn Zemach <jzemach@middlebury.edu>>",
+    "Kyle Schlanger <kschlanger@middlebury.edu>>",
+    "Stephanie Castaneda <scastaneda@middlebury.edu>>",
+    "Baptiste Garcin <bgarcin@middlebury.edu>>",
+    "Anna Vasilchenko <avasilchenko@middlebury.edu>>"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "google-distance": "^1.0.1",
+    "google-distance-matrix": "^1.1.1",
+    "google-libphonenumber": "^3.1.5",
+    "google-map-react": "^0.34.0",
+    "history": "^4.7.2",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.1",
+    "react-avatar": "^2.5.1",
+    "react-bootstrap": "^0.32.1",
+    "react-cookies": "^0.1.0",
+    "react-dom": "^16.3.1",
+    "react-places-autocomplete": "^6.1.3",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-prop-types": "^1.0.3",
+    "react-scripts": "1.1.1",
+    "react-simpletabs": "^0.7.0",
+    "react-tabs": "^2.2.1",
+    "styled-components": "^3.1.6"
+  },
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "react-test-renderer": "^16.2.0"
+  }
+}

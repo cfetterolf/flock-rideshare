@@ -1,0 +1,50 @@
+{
+  "name": "rideshare-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Server for rideshare app",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "node postinstall.js",
+    "mongo": "mongod --config mongod.conf",
+    "start": "node index.js",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "contributors": [
+    "Mariana Echeverria <mecheverria@middlebury.edu>",
+    "Holley McShan <hmcshan@middlebury.edu>",
+    "Emilio Ovalles-Misterman <eomisterman@middlebury.edu>>",
+    "Chris Fetterolf <cfetterolf@middlebury.edu>>",
+    "Jocelyn Zemach <jzemach@middlebury.edu>>",
+    "Kyle Schlanger <kschlanger@middlebury.edu>>",
+    "Stephanie Castaneda <scastaneda@middlebury.edu>>",
+    "Baptiste Garcin <bgarcin@middlebury.edu>>",
+    "Anna Vasilchenko <avasilchenko@middlebury.edu>>"
+  ],
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "jest": "^22.4.3"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.18.2",
+    "connect-mongo": "^2.0.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "db-errors": "^0.1.0",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "mongodb": "^3.0.5",
+    "mongoose": "^5.0.16",
+    "nodemailer": "^4.6.4",
+    "request": "^2.85.0",
+    "supertest": "^3.0.0",
+    "swagger-ui-express": "^3.0.8"
+  }
+}
